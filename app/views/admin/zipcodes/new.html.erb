@@ -2,7 +2,13 @@
 
 <h1><%= t('new_zipcode') %></h1>
 
-<%= error_messages_for :zipcode %>
+<%= if @zipcode.errors.any? %>
+  <ul>
+  <% @post.errors.full_messages.each do |msg| %>
+   <li> <%= msg %></li>
+  <% end %>
+  </ul>
+<% end %>
 
 <% form_for(:zipcode, :url => collection_url) do |f| %>
   <%= render :partial => 'form', :locals => { :f => f } %>
