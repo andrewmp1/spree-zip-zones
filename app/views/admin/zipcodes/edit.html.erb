@@ -2,7 +2,7 @@
 
 <h1><%= t('editing_zipcode') %></h1>
 
-<%= if @zipcode.errors.any? %>
+<% if @zipcode.errors.any? %>
   <ul>
   <% @post.errors.full_messages.each do |msg| %>
    <li> <%= msg %></li>

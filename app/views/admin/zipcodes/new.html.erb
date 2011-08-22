@@ -1,8 +1,8 @@
-<%= render :partial => 'admin/shared/configuration_menu' %>
+  <%= render :partial => 'admin/shared/configuration_menu' %>
 
 <h1><%= t('new_zipcode') %></h1>
 
-<%= if @zipcode.errors.any? %>
+<% if @zipcode.errors.any? %>
   <ul>
   <% @post.errors.full_messages.each do |msg| %>
    <li> <%= msg %></li>
